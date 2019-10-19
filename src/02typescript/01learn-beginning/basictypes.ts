@@ -63,3 +63,27 @@ const symbolObject = {
     [s]: "hello,world"
 };
 console.log(symbolObject[s]);
+// iterator???Symbol.iterator????????????
+const array = [2,"33",'3hello',true];
+for(let value of array){
+    console.log(value);
+}
+console.log('***********');
+for(let i in array){
+    let item = array[i];
+    console.log(item);
+}
+// generator
+/* 
+function *????generator??????
+*/
+console.log('******generator******')
+function * testGenerator(a){
+    let b = a + 1;
+    console.log(b);
+    let c = yield;
+    console.log(c);
+}
+const testYield = testGenerator(1);
+testYield.next(2);// ?????
+testYield.next(3);

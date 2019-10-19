@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "pretty": true,
+        "lib": ["es2015.symbol","es2015.iterable", "es2015.generator", "es5", "dom"],
+        "target": "es5",
+        "rootDir": "."
+    }
+}

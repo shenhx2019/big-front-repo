@@ -1,0 +1,19 @@
+{
+    "status": "1",
+    "count": "1",
+    "info": "OK",
+    "infocode": "10000",
+    "lives": [
+        {
+            "province": "广东",
+            "city": "广州市",
+            "adcode": "440100",
+            "weather": "晴",
+            "temperature": "26",
+            "winddirection": "东",
+            "windpower": "≤3",
+            "humidity": "45",
+            "reporttime": "2019-10-20 10:15:02"
+        }
+    ]
+}

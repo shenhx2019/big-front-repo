@@ -1,0 +1,64 @@
+{
+    "status": "1",
+    "count": "1",
+    "info": "OK",
+    "infocode": "10000",
+    "forecasts": [
+        {
+            "city": "广州市",
+            "adcode": "440100",
+            "province": "广东",
+            "reporttime": "2019-10-20 11:15:02",
+            "casts": [
+                {
+                    "date": "2019-10-20",
+                    "week": "7",
+                    "dayweather": "晴",
+                    "nightweather": "晴",
+                    "daytemp": "30",
+                    "nighttemp": "20",
+                    "daywind": "无风向",
+                    "nightwind": "无风向",
+                    "daypower": "≤3",
+                    "nightpower": "≤3"
+                },
+                {
+                    "date": "2019-10-21",
+                    "week": "1",
+                    "dayweather": "晴",
+                    "nightweather": "晴",
+                    "daytemp": "30",
+                    "nighttemp": "21",
+                    "daywind": "无风向",
+                    "nightwind": "无风向",
+                    "daypower": "≤3",
+                    "nightpower": "≤3"
+                },
+                {
+                    "date": "2019-10-22",
+                    "week": "2",
+                    "dayweather": "晴",
+                    "nightweather": "晴",
+                    "daytemp": "31",
+                    "nighttemp": "22",
+                    "daywind": "无风向",
+                    "nightwind": "无风向",
+                    "daypower": "≤3",
+                    "nightpower": "≤3"
+                },
+                {
+                    "date": "2019-10-23",
+                    "week": "3",
+                    "dayweather": "多云",
+                    "nightweather": "多云",
+                    "daytemp": "31",
+                    "nighttemp": "21",
+                    "daywind": "无风向",
+                    "nightwind": "无风向",
+                    "daypower": "≤3",
+                    "nightpower": "≤3"
+                }
+            ]
+        }
+    ]
+}

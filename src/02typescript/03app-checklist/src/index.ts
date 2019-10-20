@@ -43,10 +43,11 @@ router.get("", async (req, res, next) => {
     }
 });
 // 保存
-router.post("", async(req, res, next) => {
+router.post("", async (req, res, next) => {
+    // BUG 接收不到post过来的plain/text信息，待处理s
     const workItem = new WorkItem();
-    workItem.text = req.body.text;
-    console.log(workItem.text);
+    workItem.text = "hello,error";//req.body.text;
+    // console.log(workItem.text);
     const workItemRepository = getManager().getRepository(WorkItem);
     try {
         res.json(await workItemRepository.save(workItem));
@@ -68,7 +69,7 @@ router.put('/:id', async(req,res, next) => {
 // 删除
 router.delete('/:id', async(req,res, next) => {
 
-    const body = req.body;
+    // const body = req.body;
     const workItemRepository = getManager().getRepository(WorkItem);
     try {
         await workItemRepository.delete(req.params.id);
@@ -77,8 +78,26 @@ router.delete('/:id', async(req,res, next) => {
     }
 });
 
+app.use((req, res, next) => {
+    let reqData = [];
+    let size = 0;
+    req.on('data',function(data){
+        console.log('---> on');
+        reqData.push(data);
+        size += data.length;
+        console.log(data);
+        console.log(size);
+    });
+    req.on('end', function(){
+        console.log('---> off');
+        req.reqData = Buffer.concat(reqData,size).toString();
+        console.log(req.reqData)
+    })
+    next();
+});
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded());
 app.use("/work-items", router);
-app.use(bodyParser.json());// 这句话的意思是？
 const server = http.createServer(app);
 console.log('server start up success at port 3230...');
 app.listen(3230);

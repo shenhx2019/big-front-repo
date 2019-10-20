@@ -9,5 +9,10 @@
     "hooks": {
       "pre-commit": "yarn tslint -c tslint.json './**/*.ts'"
     }
+  },
+  "dependencies": {
+    "@types/node": "^12.11.1",
+    "colors": "^1.4.0",
+    "commander": "^3.0.2"
   }
 }
